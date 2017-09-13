@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Events
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list-header><ion-icon name="grid" item-left></ion-icon>Browse Upcoming Events</ion-list-header>
+
+  <ion-card *ngFor="let event of eventCollection">
+    <img src="{{ event.pic }}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{ event.name }}
+      </ion-card-title>
+      <p>
+        {{ event.time }}
+      </p>
+      <br/>
+      <ion-item>
+
+        <button ion-button clear item-end icon-left (click)="onJoinEvent(event)">
+          <ion-icon name="add"></ion-icon>
+          Join this event
+        </button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

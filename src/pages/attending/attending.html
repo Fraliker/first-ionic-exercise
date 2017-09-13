@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>My Events ({{ events?.length }})</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding
+      *ngFor="let event of events">
+      <ion-item>
+        <h2>{{ event.name }}</h2>
+        <p>{{ event.time }}</p>
+      </ion-item>
+
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,17 +1,38 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content class="card-background-page">
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-card>
+    <img src="assets/img/cover.png"/>
+    <div class="card-title">Events Finder</div>
+  </ion-card>
+
+  <div *ngIf="userSignedIn;else other_content" text-center>
+    <h1>Hello {{displayName}}</h1>
+  </div>
+
+  <ng-template #other_content>
+    <h1 style="text-align:center;">Hello user! Please sign in.</h1>
+  </ng-template>
+
+  <div text-center>
+    <button ion-button icon-left outline (click)="signInWithFacebook()"><ion-icon name="logo-facebook"></ion-icon>
+      Facebook Log In
+    </button>
+    <button ion-button outline (click)="signOut()">
+      Logout
+    </button>
+  </div>
+  <ion-card class="explanation">
+    <ion-card-header>
+      How to use?
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>
+        You can join an event by clicking 'Join this event' button. And you can view
+        your selection(s) in 'My Events' section.
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+
 </ion-content>

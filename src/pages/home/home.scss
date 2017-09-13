@@ -1,3 +1,47 @@
 page-home {
 
+
+  .card-background-page {
+    // background: -webkit-linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0) 80%), -webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 75%);
+    background: #5f5f5f;
+
+    h1 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    button {
+      color:#b6e5f6;
+      border-color: #b6e5f6;
+    }
+
+    ion-card {
+      position: relative;
+      text-align: center;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+    .explanation {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+  }
 }
