@@ -21,10 +21,13 @@
       </p>
       <br/>
       <ion-item>
-
-        <button ion-button clear item-end icon-left (click)="onJoinEvent(event)">
+        <button ion-button clear item-end icon-left (click)="onJoinEvent(event)" *ngIf="!isGoing(event)">
           <ion-icon name="add"></ion-icon>
           Join this event
+        </button>
+        <button ion-button clear item-end icon-left color="danger" (click)="onRemoveFromEventList(event)" *ngIf="isGoing(event)">
+          <ion-icon name="add"></ion-icon>
+          Not going anymore
         </button>
       </ion-item>
     </ion-card-content>

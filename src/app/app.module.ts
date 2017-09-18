@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AttendingPage } from '../pages/attending/attending';
 import { EventsPage } from '../pages/events/events';
+import { EventPage } from '../pages/event/event';
 import { TabsPage } from '../pages/tabs/tabs';
 import { EventsService } from "../services/events";
 
@@ -31,6 +32,7 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     EventsPage,
+    EventPage,
     AttendingPage
   ],
   imports: [
@@ -46,6 +48,7 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     EventsPage,
+    EventPage,
     AttendingPage
   ],
   providers: [

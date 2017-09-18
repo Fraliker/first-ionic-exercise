@@ -44,6 +44,13 @@ export class EventsPage implements OnInit {
       ]
     });
     alert.present();
+  }
 
+  onRemoveFromEventList(event: Event){
+
+  }
+
+  isGoing(event: Event) {
+    return this.eventsService.isGoing(event);
   }
 }

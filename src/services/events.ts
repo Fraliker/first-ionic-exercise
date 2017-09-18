@@ -9,20 +9,20 @@ export class EventsService {
 
   }
 
-  // removeQuoteFromFavorites(quote: Quote) {
-  //   const position = this.favoriteQuotes.findIndex((quoteEl: Quote) => {
-  //     return quoteEl.id == quote.id;
-  //   });
-  //   this.favoriteQuotes.splice(position, 1);
-  // }
-  //
+  removeEventFromEvents(event: Event) {
+    const position = this.savedEvents.findIndex((eventEl: Event) => {
+      return eventEl.id == event.id;
+    });
+    this.savedEvents.splice(position, 1);
+  }
+
   getEventList() {
     return this.savedEvents.slice();
   }
-  //
-  // isQuoteFavorite(quote: Quote) {
-  //   return this.favoriteQuotes.find((quoteEl: Quote) => {
-  //     return quoteEl.id == quote.id;
-  //   });
-  // }
+
+  isGoing(event: Event) {
+    return this.savedEvents.find((eventEL: Event) => {
+      return eventEL.id == event.id;
+    });
+  }
 }
