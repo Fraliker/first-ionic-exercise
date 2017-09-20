@@ -13,16 +13,25 @@
 
 
 <ion-content padding>
+  <ion-card-content>
+    <p>
+      You can remove an event by sliding the event to the left.
+    </p>
+  </ion-card-content>
   <ion-list>
     <ion-item-sliding
-      *ngFor="let event of events"
-      (click)="onViewEvent(event)">
+      *ngFor="let event of events">
       <ion-item>
         <img src="{{ event.pic }}"/>
         <h2>{{ event.name }}</h2>
         <p>{{ event.time }}</p>
       </ion-item>
-
+      <ion-item-options>
+        <button ion-button color="danger" (click)="removeFromList(event)">
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+      </ion-item-options>
     </ion-item-sliding>
   </ion-list>
 </ion-content>

@@ -29,4 +29,9 @@ export class AttendingPage {
       }
     });
   }
+
+  removeFromList(event: Event) {
+    this.eventsService.removeEventFromEvents(event);
+    this.events = this.eventsService.getEventList();
+  }
 }
