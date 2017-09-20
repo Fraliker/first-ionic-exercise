@@ -20,8 +20,10 @@ export class EventsPage implements OnInit {
     private eventsService: EventsService) {}
 
   ngOnInit() {
-    this.eventCollection = events;
-    this.eventGroup = this.navParams.data;
+    // this.eventCollection = events;
+    this.eventCollection = this.eventsService.getAllEvents();
+    // this.eventCollection = this.eventsService.events;
+    // this.eventGroup = this.navParams.data;
   }
 
   onJoinEvent(selectedEvent: Event) {
@@ -47,7 +49,7 @@ export class EventsPage implements OnInit {
   }
 
   onRemoveFromEventList(event: Event){
-
+    return this.eventsService.removeEventFromEvents(event);
   }
 
   isGoing(event: Event) {
