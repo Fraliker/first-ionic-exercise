@@ -11,8 +11,8 @@ import { EventsService } from "../../services/events";
   templateUrl: 'events.html'
 })
 export class EventsPage implements OnInit {
-  eventCollection: {name: string, time: string, pic: string}[];
-  eventGroup: {name: string, time: string, pic: string};
+  eventCollection: {id:string, name: string, time: string, pic: string}[];
+  eventGroup: {id:string, name: string, time: string, pic: string};
 
   constructor(
     private navParams: NavParams,

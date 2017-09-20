@@ -1,12 +1,12 @@
 import { Event } from "../data/event.interface";
 
 export class EventsService {
+
   private savedEvents: Event[] = [];
 
   addEventToList(event: Event) {
     this.savedEvents.push(event);
     console.log(this.savedEvents);
-
   }
 
   removeEventFromEvents(event: Event) {

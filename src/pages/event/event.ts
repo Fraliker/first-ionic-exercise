@@ -7,6 +7,7 @@ import { NavParams } from "ionic-angular";
   templateUrl: 'event.html'
 })
 export class EventPage {
+  id:string;
   name: string;
   time: string;
   pic: string;
@@ -17,6 +18,7 @@ export class EventPage {
   }
 
   ionViewDidLoad() {
+    this.id = this.navParams.get('id');
     this.name = this.navParams.get('name');
     this.time = this.navParams.get('time');
     this.pic = this.navParams.get('pic');
