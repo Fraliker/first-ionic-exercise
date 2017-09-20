@@ -3,15 +3,15 @@ page-home {
 
   .card-background-page {
     // background: -webkit-linear-gradient(rgba(135, 60, 255, 0.4), rgba(135, 60, 255, 0) 80%), -webkit-linear-gradient(-45deg, rgba(120, 155, 255, 0.9) 25%, rgba(255, 160, 65, 0.9) 75%);
-    background: #5f5f5f;
+    background: #fefefe;
 
     h1 {
-      color: rgba(255, 255, 255, 0.9);
+      color: #488aff;
     }
 
     button {
-      color:#b6e5f6;
-      border-color: #b6e5f6;
+      color: #488aff;
+      border-color: #488aff;
     }
 
     ion-card {
@@ -27,7 +27,7 @@ page-home {
       font-size: 2.0em;
       width: 100%;
       font-weight: bold;
-      color: #fff;
+      color: #5d5d5d;
     }
 
     .card-subtitle {

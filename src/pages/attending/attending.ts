@@ -29,16 +29,4 @@ export class AttendingPage {
       }
     });
   }
-
-
-  // onRemoveFromFavorites(event: Event) {
-  //   this.eventsService.removeEventFromFavorites(event);
-  //   // this.events = this.eventsService.getFavoriteEvents();
-  //   const position = this.events.findIndex((eventEl: Event) => {
-  //     return eventEl.id == event.id;
-  //   });
-  //   this.events.splice(position, 1);
-  // }
-
-
 }
