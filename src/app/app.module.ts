@@ -10,6 +10,7 @@ import { AttendingPage } from '../pages/attending/attending';
 import { EventsPage } from '../pages/events/events';
 import { EventPage } from '../pages/event/event';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SettingsPage } from '../pages/settings/settings';
 import { EventsService } from "../services/events";
 
 
@@ -33,6 +34,7 @@ export const firebaseConfig = {
     TabsPage,
     EventsPage,
     EventPage,
+    SettingsPage,
     AttendingPage
   ],
   imports: [
@@ -49,6 +51,7 @@ export const firebaseConfig = {
     TabsPage,
     EventsPage,
     EventPage,
+    SettingsPage,
     AttendingPage
   ],
   providers: [

@@ -21,13 +21,13 @@
   <ion-list>
     <ion-item-sliding
       *ngFor="let event of events">
-      <ion-item>
+      <ion-item  color="eventBackgroud">
         <img src="{{ event.pic }}"/>
         <h2>{{ event.name }}</h2>
         <p>{{ event.time }}</p>
       </ion-item>
       <ion-item-options>
-        <button ion-button color="danger" (click)="removeFromList(event)">
+        <button ion-button color="deleteButton" (click)="removeFromList(event)">
           <ion-icon name="trash"></ion-icon>
           Delete
         </button>

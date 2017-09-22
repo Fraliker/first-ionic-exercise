@@ -34,4 +34,5 @@ export class HomePage {
     this.afAuth.auth.signOut();
   }
 
+
 }
