@@ -12,6 +12,7 @@ import { EventPage } from '../pages/event/event';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from '../pages/settings/settings';
 import { EventsService } from "../services/events";
+import { SettingsService } from "../services/settings";
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -58,7 +59,8 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    EventsService
+    EventsService,
+    SettingsService
   ]
 })
 export class AppModule {}
