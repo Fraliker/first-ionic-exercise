@@ -10,7 +10,7 @@ import { EventsService } from '../../services/events';
 export class NewPage {
 
   onAddEvent(form: NgForm) {
-    console.log(form);
+    // console.log(form);
     var id = this.eventsService.getAllEvents().length + 1;
     this.eventsService.addEvent(id.toString(),form.value.eventName, form.value.eventTime,'assets/img/cover.png');
     console.log(this.eventsService.getAllEvents());

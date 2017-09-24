@@ -44,7 +44,8 @@ export class EventsService {
   }
 
   getAllEvents() {
-    return this.events.slice();
+    // return this.events.slice();
+    return this.events;
   }
 
   getEventList() {
@@ -59,7 +60,8 @@ export class EventsService {
 
   // addEvent(event: Event)
   addEvent(id: string, name: string, time: string, pic: string) {
-    this.events.push(new Event(id, name, time, pic));
+    // this.events.push(new Event(id, name, time, pic));
+    this.events.push({id: id, name: name, time: time, pic: pic});
   }
 
 
