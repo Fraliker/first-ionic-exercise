@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Event</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form #f="ngForm" (ngSubmit)="onAddEvent(f)">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Name</ion-label>
+        <ion-input type="text" name="eventName" placeholder="Enter Name Here" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Time</ion-label>
+        <ion-input type="text" name="eventTime" placeholder="Enter Time Here" ngModel required></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button type="submit" block [disabled]="!f.valid">Add Event</button>
+  </form>
+
+</ion-content>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
-import { Event } from "../../data/event.interface";
+import { Event } from "../../models/event";
 import { EventsService } from "../../services/events";
 import { EventsPage } from "../events/events";
 import { EventPage } from '../event/event';

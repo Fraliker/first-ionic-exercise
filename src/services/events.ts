@@ -1,4 +1,4 @@
-import { Event } from "../data/event.interface";
+import { Event } from "../models/event";
 
 export class EventsService {
 
@@ -56,4 +56,11 @@ export class EventsService {
       return eventEL.id == event.id;
     });
   }
+
+  // addEvent(event: Event)
+  addEvent(id: string, name: string, time: string, pic: string) {
+    this.events.push(new Event(id, name, time, pic));
+  }
+
+
 }

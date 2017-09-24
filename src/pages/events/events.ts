@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from "ionic-angular";
 import { NavParams } from "ionic-angular";
-import events from '../../data/events';
 
-import { Event } from "../../data/event.interface";
+import { Event } from "../../models/event";
 import { EventsService } from "../../services/events";
 
 @Component({
@@ -15,7 +14,6 @@ export class EventsPage implements OnInit {
   eventGroup: {id:string, name: string, time: string, pic: string};
 
   constructor(
-    private navParams: NavParams,
     private alertCtrl: AlertController,
     private eventsService: EventsService) {}
 
