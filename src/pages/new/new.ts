@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { EventsService } from '../../services/events';
+import { NavController } from 'ionic-angular';
+import { FormPage } from '../form/form';
 
 @Component({
   selector: 'page-new',
@@ -17,7 +19,12 @@ export class NewPage {
     form.reset();
   }
 
-  constructor(private eventsService: EventsService){}
+  constructor(private eventsService: EventsService,
+              private navCtrl: NavController){}
+
+  onNewEvent() {
+    this.navCtrl.push(FormPage, {mode: 'New'});
+  }
 
 
 }

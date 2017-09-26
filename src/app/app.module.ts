@@ -14,6 +14,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { EventsService } from "../services/events";
 import { SettingsService } from "../services/settings";
 import { NewPage } from '../pages/new/new';
+import { FormPage } from '../pages/form/form';
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -38,7 +39,8 @@ export const firebaseConfig = {
     EventPage,
     SettingsPage,
     AttendingPage,
-    NewPage
+    NewPage,
+    FormPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ export const firebaseConfig = {
     EventPage,
     SettingsPage,
     AttendingPage,
-    NewPage
+    NewPage,
+    FormPage
   ],
   providers: [
     StatusBar,

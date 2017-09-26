@@ -44,8 +44,8 @@ export class EventsService {
   }
 
   getAllEvents() {
-    // return this.events.slice();
-    return this.events;
+    return this.events.slice();
+    // return this.events;
   }
 
   getEventList() {

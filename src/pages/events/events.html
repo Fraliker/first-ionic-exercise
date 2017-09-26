@@ -12,7 +12,7 @@
 
   <ion-list-header><ion-icon name="grid" item-left></ion-icon>Browse Upcoming Events</ion-list-header>
 
-  <ion-card *ngFor="let event of eventCollection">
+  <ion-card *ngFor="let event of eventCollection; let i = index;" (click)="onCheckEvent(i)">
     <img src="{{ event.pic }}"/>
     <ion-card-content>
       <ion-card-title>

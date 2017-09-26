@@ -19,9 +19,13 @@ export class EventsPage implements OnInit {
 
   ngOnInit() {
     // this.eventCollection = events;
-    this.eventCollection = this.eventsService.getAllEvents();
+    // this.eventCollection = this.eventsService.getAllEvents();
     // this.eventCollection = this.eventsService.events;
     // this.eventGroup = this.navParams.data;
+  }
+
+  ionViewWillEnter() {
+    this.loadEvents();
   }
 
   onJoinEvent(selectedEvent: Event) {
@@ -53,4 +57,13 @@ export class EventsPage implements OnInit {
   isGoing(event: Event) {
     return this.eventsService.isGoing(event);
   }
+
+  private loadEvents() {
+    this.eventCollection = this.eventsService.getAllEvents();
+  }
+
+  onCheckEvent(index: number) {
+    console.log(index);
+  }
+
 }
