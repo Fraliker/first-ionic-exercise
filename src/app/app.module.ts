@@ -13,9 +13,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { SettingsPage } from '../pages/settings/settings';
 import { EventsService } from "../services/events";
 import { SettingsService } from "../services/settings";
+import { AuthService } from '../services/auth';
 import { NewPage } from '../pages/new/new';
 import { FormPage } from '../pages/form/form';
-
+import { SigninPage } from '../pages/signin/signin';
+import { SignupPage } from '../pages/signup/signup';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -40,7 +42,9 @@ export const firebaseConfig = {
     SettingsPage,
     AttendingPage,
     NewPage,
-    FormPage
+    FormPage,
+    SigninPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -59,14 +63,17 @@ export const firebaseConfig = {
     SettingsPage,
     AttendingPage,
     NewPage,
-    FormPage
+    FormPage,
+    SigninPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EventsService,
-    SettingsService
+    SettingsService,
+    AuthService
   ]
 })
 export class AppModule {}
