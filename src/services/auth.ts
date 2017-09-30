@@ -20,4 +20,8 @@ export class AuthService {
     firebase.auth().signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(res => console.log(res));
   }
 
+  getActiveUser() {
+    return firebase.auth().currentUser;
+  }
+
 }

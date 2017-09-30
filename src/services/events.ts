@@ -1,6 +1,12 @@
 import { Event } from "../models/event";
+import { Injectable } from "@angular/core";
+import { Http, Response } from '@angular/http';
+import { AuthService } from './auth';
+import 'rxjs/Rx';
 
+@Injectable()
 export class EventsService {
+  constructor(private http: Http, private authService: AuthService) {}
 
   private events = [
     {
@@ -62,6 +68,29 @@ export class EventsService {
   addEvent(id: string, name: string, time: string, pic: string) {
     // this.events.push(new Event(id, name, time, pic));
     this.events.push({id: id, name: name, time: time, pic: pic});
+  }
+
+  storeList(token: string) {
+    const userId = this.authService.getActiveUser().uid;
+    return this.http.put('https://my-first-project-5cdc5.firebaseio.com/' + userId + '/events.json?auth=' + token, this.savedEvents)
+    .map((response: Response) => {
+      return response.json();
+    });
+  }
+
+  fetchList(token: string) {
+    const userId = this.authService.getActiveUser().uid;
+    return this.http.get('https://my-first-project-5cdc5.firebaseio.com/' + userId + '/events.json?auth=' + token)
+    .map((response: Response) => {
+      return response.json();
+    })
+    .do((savedEvents: Event[]) => {
+      if (savedEvents) {
+        this.savedEvents = savedEvents
+      } else {
+        this.savedEvents = [];
+      }
+    });
   }
 
 

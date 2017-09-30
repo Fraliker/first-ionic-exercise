@@ -49,11 +49,6 @@ export class MyApp {
     });
   }
 
-
-
-
-
-
   onLoad(page: any) {
     this.nav.setRoot(page);
     this.menuCtrl.close();

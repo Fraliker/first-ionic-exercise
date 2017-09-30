@@ -23,4 +23,5 @@ export class EventPage {
     this.time = this.navParams.get('time');
     this.pic = this.navParams.get('pic');
   }
+
 }
